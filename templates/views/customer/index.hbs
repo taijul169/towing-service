@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>IVRS - Towing Services Near You</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+      <p id="demo"></p>
+
+        <script>
+            var x = document.getElementById("demo");
+
+            function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+            }
+
+            function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+            }
+        </script>
+        
+        <!-- Responsive navbar-->
+        <nav class=" fixed-top  navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand text-light" href="#">IVRS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item " style="color: #FFF;"><a class="nav-link active" style="color: #9B5DE5;" aria-current="page" href="#">Home</a></li>
+                        <li class="nav-item "><a class="nav-link text-light" href="#">Find Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Get in</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                
+                                <li><a class="dropdown-item" href="#">As Customer</a></li>
+                                
+                                <li><a class="dropdown-item" href="#"> AS Service Provider</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div style="height: 100vh; background-image: url(https://images.pexels.com/photos/3807277/pexels-photo-3807277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-size: cover; background-position: center;" class="position-relative w-100">
+                <div class="position-absolute text-white d-flex flex-column align-items-start justify-content-center" style="top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,.7);">
+                  <div class="container">
+                    <div class="col-md-12">
+                      <span style="color: #bbb;" class="text-uppercase">Need Emergency Help?</span>
+                      <!-- on small screens remove display-4 -->
+                      <h1 class="mb-4 mt-2 display-4 font-weight-bold">Get your <span style="color: #9B5DE5;">Towing Services Near You</span></h1>
+                      <p  style="color: #bbb;">Please turn on your browser location to get a faster service from your nearest place?</p>
+                      <div class="mt-5">
+                        <!-- hover background-color: white; color: black;
+                        <a href="#" class="btn px-5 py-3 text-white mt-3 mt-sm-0" style="border-radius: 30px; background-color: #9B5DE5;">Get Started</a> -->
+                        <div class="card">
+                            <div class="card-body">
+                               <form action="/send-request.html">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group mb-2">
+                                            <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group mb-2">
+                                            <input type="text" name="phone" required id="phone" placeholder="Enter your phone" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-2">
+                                           
+                                            <select name="service_type" id="service_type" class="form-select" aria-label="Default select example">
+                                                <option value="Car Battery Replacement">Choose you service</option>
+                                                <option value="Car Battery Replacement">Car Battery Replacement</option>
+                                                <option value="Car Battery Replacement">Car Battery Replacement</option>
+                                                <option value="Car Battery Replacement">Car Battery Replacement</option>
+                                                <option value="Car Battery Replacement">Car Battery Replacement</option>
+                                                <option value="Car Battery Replacement">Car Battery Replacement</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <input type="submit" value="Send Request" name="phone" id="phone"  class="btn" style="background-color: #9B5DE5; color: #FFF;">
+                                              <div class="spinner-border text-primary d-none" style="color: #9B5DE5;" role="status">
+                                                
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               </form>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+         </div>
+                   
+           
+         <footer class="text-center text-white" style="background-color: #caced1;">
+                <!-- Grid container -->
+                <div class="container p-4">
+                  <!-- Section: Images -->
+                  <section class="">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div
+                          class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                          data-ripple-color="light"
+                        >
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+                            class="w-100"
+                          />
+                          <a href="#!">
+                            <div
+                              class="mask"
+                              style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div
+                          class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                          data-ripple-color="light"
+                        >
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+                            class="w-100"
+                          />
+                          <a href="#!">
+                            <div
+                              class="mask"
+                              style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div
+                          class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                          data-ripple-color="light"
+                        >
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+                            class="w-100"
+                          />
+                          <a href="#!">
+                            <div
+                              class="mask"
+                              style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div
+                          class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                          data-ripple-color="light"
+                        >
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+                            class="w-100"
+                          />
+                          <a href="#!">
+                            <div
+                              class="mask"
+                              style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div
+                          class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                          data-ripple-color="light"
+                        >
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+                            class="w-100"
+                          />
+                          <a href="#!">
+                            <div
+                              class="mask"
+                              style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div
+                          class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                          data-ripple-color="light"
+                        >
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
+                            class="w-100"
+                          />
+                          <a href="#!">
+                            <div
+                              class="mask"
+                              style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- Section: Images -->
+                </div>
+                <!-- Grid container -->
+              
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                  © 2023 Copyright:
+                  <a class="text-white" href="https://taijul.xyz/">taijul.xyz</a>
+                </div>
+                <!-- Copyright -->
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
