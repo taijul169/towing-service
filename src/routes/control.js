@@ -76,6 +76,49 @@ router.get('/admin/groups',(req,res)=>{
         
     }
 })
+router.get('/admin/login',(req,res)=>{
+    try {
+        res.render('admin/login')
+    } catch (error) {
+        
+    }
+})
+
+
+// groups start
+
+router.get('/groups/login',(req,res)=>{
+    try {
+        res.render('groups/login')
+    } catch (error) {
+        
+    }
+})
+
+router.get('/groups/signup',(req,res)=>{
+    try {
+        res.render('groups/signup')
+    } catch (error) {
+        
+    }
+})
+
+
+router.get('/groups/control',(req,res)=>{
+    try {
+        res.render('groups/index')
+    } catch (error) {
+        
+    }
+})
+
+router.get('/groups/requests',(req,res)=>{
+    try {
+        res.render('groups/requests')
+    } catch (error) {
+        
+    }
+})
 // =============================================================TWOING SERVICE END=========================================================
 
 
