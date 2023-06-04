@@ -318,19 +318,19 @@
                                 console.log("Success:", data);
                                 if(data.code === 201){
                                     custom_alert_box.style.display="block"
+                                    custom_alert_box.innerHTML = `<strong>Success!!</strong> You are redirecting to dashboard...`;
                                     custom_alert_box.classList.add('alert-success')            
                                     custom_alert_box.classList.remove('alert-danger')
                                     window.scrollTo({ top: 0, behavior: 'smooth' })
                                     setTimeout(()=>{
                                         setCookie('usertoken', data.token, 30);
                                         custom_alert_box.style.display="none"
-                                        //location.href = '/groups/control';
+                                        location.href = '/groups/control';
                                     }, 3000);
                                 }
                                 if(data.code === 400){
                                     custom_alert_box.style.display="block";
-                                    custom_alert_box.innerHTML = `<strong>Empty!!</strong> All the necessary field required!!
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
+                                    custom_alert_box.innerHTML = `<strong>Empty!!</strong> All the necessary field required!!`;
                                     
                                     custom_alert_box.classList.remove('alert-success')            
                                     custom_alert_box.classList.add('alert-danger')            
@@ -344,7 +344,7 @@
                                 if(data.code === 409){
                                     custom_alert_box.style.display="block"
                                     custom_alert_box.innerHTML = `<strong>Faild!!</strong> User Already Exist!!
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`
+                                                `
                                     custom_alert_box.classList.remove('alert-success')            
                                     custom_alert_box.classList.add('alert-danger')            
                                     window.scrollTo({ top: 0, behavior: 'smooth' })
