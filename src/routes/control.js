@@ -119,6 +119,13 @@ router.get('/groups/requests',(req,res)=>{
         
     }
 })
+router.get('/groups/settings',(req,res)=>{
+    try {
+        res.render('groups/settings')
+    } catch (error) {
+        
+    }
+})
 // =============================================================TWOING SERVICE END=========================================================
 
 

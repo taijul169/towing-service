@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>IVRS - Towing Services Near You</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #eee
+        }
+
+        .nav-link {
+            border-radius: 0px !important;
+            transition: all 0.5s;
+            width: 100px;
+            display: flex;
+            flex-direction: column
+        }
+
+        .nav-link small {
+            font-size: 12px
+        }
+
+        .nav-link:hover {
+            background-color: #52525240 !important
+        }
+
+        .nav-link .fa {
+            transition: all 1s;
+            font-size: 20px
+        }
+
+        .nav-link:hover .fa {
+            transform: rotate(360deg)
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-wrapper d-flex">
+        <!-- sidenav -->
+        <div class="d-flex flex-column flex-shrink-0 bg-light vh-100" style="width: 100px;">
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+               
+                <li> <a href="/groups/control" class="nav-link  py-3 border-bottom"> <i class="fa fa-dashboard"></i>
+                        <small>Dashboard</small> </a> </li>
+                
+                <li> <a href="/groups/requests" class="nav-link py-3 border-bottom"> <i class="fa fa-first-order"></i> <small>Requests</small> </a> </li>
+                <li> <a href="/groups/groups" class="nav-link py-3 border-bottom"> <i class="fa fa-users"></i> <small>Groups</small>
+                    </a> </li>
+                <li> <a href="/groups/settings" class="nav-link active py-3 border-bottom"> <i class="fa fa-cog"></i>
+                        <small>Settings</small> </a> </li>
+            </ul>
+            <div class="dropdown border-top"> <a href="#"
+                    class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                    id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false"> <img
+                        src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle"> </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content border w-100 m-4 ">
+            <section>
+                <!-- <h3>Home</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="fa fa-facebook"></i>
+                                <h6>Total Service Requests</h6>
+                                <strong>50</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="container-xl">
+                    <div class="col-md-12 pe-0">
+                                <div class="form-left h-100 py-5 px-5">
+                                    <form id="myForm" class="row g-4">
+                                         <h4>Profile Settings</h4>
+                                         <div class="col-md-12">
+                                               <div class="alert  alert-dismissible fade show alert_custom  alert-success" role="alert" id="custom_alert_box" style="display: none;">
+                                                <strong>Success</strong> Updated
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                             </div>
+                                           </div>
+                                           <div class="col-md-12 col-12">
+                                                <div class="picture-container">
+                                                    <div class="picture">
+                                                        <img src="https://lh3.googleusercontent.com/LfmMVU71g-HKXTCP_QWlDOemmWg4Dn1rJjxeEsZKMNaQprgunDTtEuzmcwUBgupKQVTuP0vczT9bH32ywaF7h68mF-osUSBAeM6MxyhvJhG6HKZMTYjgEv3WkWCfLB7czfODidNQPdja99HMb4qhCY1uFS8X0OQOVGeuhdHy8ln7eyr-6MnkCcy64wl6S_S6ep9j7aJIIopZ9wxk7Iqm-gFjmBtg6KJVkBD0IA6BnS-XlIVpbqL5LYi62elCrbDgiaD6Oe8uluucbYeL1i9kgr4c1b_NBSNe6zFwj7vrju4Zdbax-GPHmiuirf2h86eKdRl7A5h8PXGrCDNIYMID-J7_KuHKqaM-I7W5yI00QDpG9x5q5xOQMgCy1bbu3St1paqt9KHrvNS_SCx-QJgBTOIWW6T0DHVlvV_9YF5UZpN7aV5a79xvN1Gdrc7spvSs82v6gta8AJHCgzNSWQw5QUR8EN_-cTPF6S-vifLa2KtRdRAV7q-CQvhMrbBCaEYY73bQcPZFd9XE7HIbHXwXYA=s200-no" class="picture-src" id="wizardPicturePreview" title="">
+                                                        <input type="file" id="wizard-picture" class="">
+                                                    </div>
+                                                    <h6 class="">Choose Picture</h6>
+
+                                                </div>
+                                                <style>
+                                                    .picture-container{
+                                                            position: relative;
+                                                            cursor: pointer;
+                                                            text-align: center;
+                                                        }
+                                                        .picture{
+                                                            width: 106px;
+                                                            height: 106px;
+                                                            background-color: #999999;
+                                                            border: 4px solid #CCCCCC;
+                                                            color: #FFFFFF;
+                                                            border-radius: 50%;
+                                                            margin: 0px auto;
+                                                            overflow: hidden;
+                                                            transition: all 0.2s;
+                                                            -webkit-transition: all 0.2s;
+                                                        }
+                                                        .picture:hover{
+                                                            border-color: #2ca8ff;
+                                                        }
+                                                        .content.ct-wizard-green .picture:hover{
+                                                            border-color: #05ae0e;
+                                                        }
+                                                        .content.ct-wizard-blue .picture:hover{
+                                                            border-color: #3472f7;
+                                                        }
+                                                        .content.ct-wizard-orange .picture:hover{
+                                                            border-color: #ff9500;
+                                                        }
+                                                        .content.ct-wizard-red .picture:hover{
+                                                            border-color: #ff3b30;
+                                                        }
+                                                        .picture input[type="file"] {
+                                                            cursor: pointer;
+                                                            display: block;
+                                                            height: 100%;
+                                                            left: 0;
+                                                            opacity: 0 !important;
+                                                            position: absolute;
+                                                            top: 0;
+                                                            width: 100%;
+                                                        }
+
+                                                        .picture-src{
+                                                            width: 100%;
+                                                            
+                                                        }
+                                                </style>
+                                           </div>
+                                        
+                                            <div class="col-md-6 col-sm-12 col-12">
+                                                <label>First Name<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-12">
+                                                <label>First Name<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter Name">
+                                                </div>
+                                            </div>
+                                             <div class="col-md-6 col-sm-12">
+                                                <label>Last Name<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12 col-sm-12">
+                                                <label>Email<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12 col-sm-12">
+                                                <label>Mobile<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="number" class="form-control" name="phone" id="phone" placeholder="Enter Mobile">
+                                                </div>
+                                            </div>
+                                           
+                                             <div class="col-md-6 col-12 col-sm-12">
+                                                <label>Gender<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <select name="gender" id="gender" class="form-control">
+                                                        <option value="male">Male</option>
+                                                        <option value="female">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                              <div class="col-12  col-md-6 col-sm-12">
+                                                <label>Date of Birth<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                   <input type="date" name="dateofbirth" id="dateofbirth" class="form-control">
+                                                </div>
+                                            </div>
+                                             <div class="col-12 col-md-6 col-sm-12">
+                                                <label>Address<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="text" class="form-control" name="address" id="address" placeholder="Enter Address">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <label>Lattitude<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="text" class="form-control" readonly name="lat" id="lat" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <label>Longitude<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="text" class="form-control" readonly name="long" id="long" >
+                                                </div>
+                                            </div>
+                                              <div class="col-md-6 col-12 col-sm-12">
+                                                <label>CLick to get your location<span class="text-danger">*</span></label>
+                                                <div class="input-group ">
+                                                     <button type="button" onclick="getlocation()" class="btn btn-secondary">Get Location</button>
+                                                </div>
+
+                                                <script>
+                                                    const getlocation =()=>{
+                                                        getLocation()
+                                                       
+                                                       
+                                                            function getLocation() {
+                                                                if (navigator.geolocation) {
+                                                                    navigator.geolocation.getCurrentPosition(showPosition);
+                                                                } 
+                                                            }
+
+                                                            function showPosition(position) {
+                                                            document.getElementById("lat").value = position.coords.latitude
+                                                            document.getElementById("long").value = position.coords.longitude
+                                                            
+                                                            }
+
+                                                    }
+                                                </script>
+                                            </div>
+                                            <div class="col-12">
+                                                <label>Password<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter Password">
+                                                </div>
+                                            </div>
+
+                                            
+
+                                         
+
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-secondary px-4 float-end mt-4">update</button>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                   
+                   
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Prepare the preview for profile picture
+                $("#wizard-picture").change(function(){
+                    readURL(this);
+                });
+            });
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+    </script>
+</body>
+
+</html>
